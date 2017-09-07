@@ -1,0 +1,24 @@
+.table-header {
+  span {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+  .sort-in {
+    &:after {
+      content: 'v';
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .sort-out {
+    &:after {
+      content: 'q';
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

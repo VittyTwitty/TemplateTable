@@ -1,0 +1,23 @@
+<app-vt-table [items]="items"
+              [columns]="columns"
+              [columnsHeader]="columnsHeader">
+  <ng-container>
+
+    <ng-template #name let-item="item">
+      {{item?.nm}}
+    </ng-template>
+
+    <ng-template #surname let-item="item">
+      {{item?.cont}}
+    </ng-template>
+
+    <ng-template #id let-item="item">
+      {{item?.id}}
+    </ng-template>
+
+    <ng-template #time let-item="item">
+      {{item?.time}}
+    </ng-template>
+
+  </ng-container>
+</app-vt-table>

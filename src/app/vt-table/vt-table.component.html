@@ -1,0 +1,23 @@
+<table border="1" cellpadding="10">
+
+  <thead>
+  <tr>
+    <td class="table-header" *ngFor="let column of columns;">
+      <span
+        appChangeClass
+        (click)="sort()"
+        [class.sort-in]="wasClicked" [class.sort-out]="!wasClicked">{{column.columnsHeader}}</span>
+    </td>
+  </tr>
+  </thead>
+
+  <tr *ngFor="let item of items">
+    <td *ngFor="let column of columns;">
+      <ng-container
+        [ngTemplateOutlet]="column.reference"
+        [ngOutletContext]="{ item: item }">
+      </ng-container>
+    </td>
+  </tr>
+
+</table>
